@@ -1,6 +1,6 @@
 package ducanh.master.myspotify.domain.artist;
 
-import ducanh.master.myspotify.domain.BaseEntity;
+import ducanh.master.myspotify.domain.common.BaseEntity;
 import ducanh.master.myspotify.domain.album.Album;
 import ducanh.master.myspotify.domain.song.Song;
 import lombok.Getter;
@@ -24,9 +24,9 @@ public class Artist extends BaseEntity {
     @Column(name = "nationality")
     private String nationality;
 
-    @OneToMany(mappedBy = "song")
+    @OneToMany(mappedBy = "artist")
     private List<Song> songs;
 
-    @OneToMany(mappedBy = "album")
+    @OneToMany(mappedBy = "artist")
     private List<Album> albums;
 }

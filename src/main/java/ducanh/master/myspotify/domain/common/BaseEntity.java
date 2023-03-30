@@ -1,4 +1,4 @@
-package ducanh.master.myspotify.domain;
+package ducanh.master.myspotify.domain.common;
 
 import lombok.AccessLevel;
 import lombok.Getter;

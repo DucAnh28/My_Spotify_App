@@ -1,15 +1,13 @@
 package ducanh.master.myspotify.domain.user;
 
-import ducanh.master.myspotify.domain.BaseEntity;
+import ducanh.master.myspotify.domain.common.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -32,6 +30,6 @@ public class Customer extends BaseEntity {
     @Column(name = "phone")
     private String phone;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    private
+    @Column(name = "last_login")
+    private LocalDateTime lastLogin;
 }
